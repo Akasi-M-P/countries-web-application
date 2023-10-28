@@ -11,15 +11,9 @@ const CardList = ({ data }) => {
             key={index}
             country={item.name}
             flag={item.flags.svg || item.flags.png}
-            population={item.population}
-            capital={item.capital}
-            region={item.region}
-            // location={item.location}
-            // description={item.description}
-            // requirementsContent={item.requirements.content}
-            // requirementsItems={item.requirements.items}
-            // roleContent={item.role.content}
-            // roleItems={item.role.items}
+            population={item.population || "Not Available"}
+            capital={item.capital || "Not Available"}
+            region={item.region || "Not Available"}
           />
         ))}
       </section>
