@@ -3,15 +3,15 @@ import NavBar from "./NavBar/NavBar";
 import { ThemeContext } from "./Theme/ThemeContext";
 import SearchBar from "./SearchBar/SearchBar";
 import DropDown from "./DropDown/DropDown";
-import CountryCard from "./CountryCard/CountryCard"
+import data from "./data.json";
+
+import CardList from "./CardList/CardList";
 
 function App() {
-  const { darkMode } = useContext(ThemeContext)
+  const { darkMode } = useContext(ThemeContext);
   return (
     <>
-      <main
-        className={darkMode ? "dark-Mode h-screen" : "h-screen bg-gray-200"}
-      >
+      <main className={darkMode ? "dark-Mode h-full" : "h-screen bg-gray-200"}>
         <div>
           <NavBar />
         </div>
@@ -22,7 +22,7 @@ function App() {
           <DropDown />
         </div>
         <div>
-          <CountryCard/>
+          <CardList data={data} />
         </div>
       </main>
     </>
