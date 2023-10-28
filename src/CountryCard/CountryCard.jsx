@@ -6,12 +6,12 @@ const CountryCard = ({ country, flag, population, region, capital }) => {
   const { darkMode } = useContext(ThemeContext);
   return (
     <main
-      className={`w-3/4 h-full  ${
+      className={`w-3/4 h-full xl:w-11/12  ${
         darkMode ? "bg-slate-800" : "bg-gray-100"
       } mx-auto mt-10 rounded-md shadow-lg`}
     >
       <section>
-        <img src={flag} alt="ghana" className="rounded-tl-md rounded-tr-md" />
+        <img src={flag} alt="ghana" className=" rounded-tl-md rounded-tr-md " />
       </section>
       <section className="px-4">
         <section className="py-4">

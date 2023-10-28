@@ -5,7 +5,7 @@ import CountryCard from "../CountryCard/CountryCard";
 const CardList = ({ data }) => {
   return (
     <>
-      <section className="card__Container">
+      <section className="xl:grid xl:grid-cols-4 xl:gap-5 xl:px-8">
         {data.map((item, index) => (
           <CountryCard
             key={index}

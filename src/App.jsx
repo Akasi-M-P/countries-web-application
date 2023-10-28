@@ -11,16 +11,19 @@ function App() {
   const { darkMode } = useContext(ThemeContext);
   return (
     <>
-      <main className={darkMode ? "dark-Mode h-full" : "h-screen bg-gray-200"}>
+      <main className={darkMode ? "dark-Mode h-full" : "h-full bg-gray-200"}>
         <div>
           <NavBar />
         </div>
-        <div>
-          <SearchBar />
-        </div>
-        <div>
-          <DropDown />
-        </div>
+        <section className="xl:flex xl:justify-between xl:items-center xl:px-12">
+          <div className="xl:w-1/3">
+            <SearchBar />
+          </div>
+          <div className="xl:w-1/5">
+            <DropDown />
+          </div>
+        </section>
+
         <div>
           <CardList data={data} />
         </div>

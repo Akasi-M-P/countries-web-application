@@ -18,11 +18,11 @@ const SearchBar = () => {
     <main
       className={
         darkMode
-          ? "w-11/12 md:w-11/12 lg:w-10/12 2xl:lg:w-9/12 flex items-center justify-between mx-auto rounded-lg bg-var(--dark-blue) shadow-md px-8 py-2 mt-6"
-          : "w-11/12 md:w-11/12 lg:w-10/12 2xl:lg:w-9/12 flex items-center justify-between mx-auto rounded-lg bg-white shadow-md px-8 py-2 mt-6"
+          ? "w-11/12 md:w-11/12 lg:w-10/12 xl:w-full  2xl:lg:w-9/12 flex items-center justify-between mx-auto rounded-lg bg-var(--dark-blue) shadow-md px-8 py-2 mt-6"
+          : "w-11/12 md:w-11/12 lg:w-10/12 xl:w-full 2xl:lg:w-9/12 flex items-center justify-between mx-auto rounded-lg bg-white shadow-md px-8 py-2 mt-6"
       }
     >
-      <section className="flex gap-5 items-center w-3/4">
+      <section className="flex gap-5 items-center w-3/4 xl:w-10/12">
         <FiSearch className="w-5 h-5 md:w-7 md:h-8 lg:w-10 lg:h-10 text-gray-500" />
         <input
           type="text"

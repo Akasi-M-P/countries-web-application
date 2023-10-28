@@ -7,10 +7,14 @@ const NavBar = () => {
     <main
       className={`flex justify-between items-center ${
         darkMode ? "bg-var(--dark-blue)" : "bg-gray-100"
-      } px-5 h-16 shadow-md`}
+      } px-5 h-16 shadow-md xl:px-12`}
     >
       <section>
-        <p className={`text-xs font-bold ${darkMode ? "text-gray-300" : ""}`}>
+        <p
+          className={`text-xs xl:text-lg font-bold ${
+            darkMode ? "text-gray-300" : ""
+          }`}
+        >
           Where in the world?
         </p>
       </section>
@@ -18,20 +22,20 @@ const NavBar = () => {
         {!darkMode ? (
           <section className="flex gap-2">
             <BsMoonStarsFill
-              className="cursor-pointer"
+              className="cursor-pointer xl:w-7 xl:h-7"
               onClick={enableDarkMode}
             />{" "}
-            <p className=" text-gray-900 font-mono text-sm tracking-wider">
+            <p className=" text-gray-900 font-mono text-sm xl:text-lg tracking-wider">
               Dark Mode
             </p>
           </section>
         ) : (
           <section className="flex gap-2">
             <BsFillSunFill
-              className="cursor-pointer text-white"
+              className="cursor-pointer text-white xl:w-7 xl:h-7"
               onClick={enableDarkMode}
             />
-            <p className=" text-gray-300 font-mono text-sm tracking-wider">
+            <p className=" text-gray-300 font-mono text-sm xl:text-lg tracking-wider">
               Light Mode
             </p>
           </section>
