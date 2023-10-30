@@ -14,6 +14,11 @@ const CardList = ({ data }) => {
             population={item.population || "Not Available"}
             capital={item.capital || "Not Available"}
             region={item.region || "Not Available"}
+            nativeName={item.nativeName || "Not Available"}
+            subRegion={item.subregion || "Not Available"}
+            domain={item.topLevelDomain || "Not Available"}
+            currencies={data.currencies?.name || "Not Available"}
+            languages={item.languages.name || "Not Available"}
           />
         ))}
       </section>
@@ -21,3 +26,5 @@ const CardList = ({ data }) => {
   );
 };
 export default CardList;
+
+
