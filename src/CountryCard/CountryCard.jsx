@@ -242,7 +242,7 @@ const CountryCard = () => {
                               </button>
                             </div>
 
-                            <div className="mt-2">
+                            <div className="mt-2 flex flex-col">
                               <section>
                                 <img
                                   src={country.flags.svg || country.flags.png}
@@ -255,12 +255,12 @@ const CountryCard = () => {
                                   <p
                                     className={`${
                                       darkMode ? "text-gray-200" : "text-black"
-                                    } font-bold`}
+                                    } font-bold `}
                                   >
                                     {country.name.common}
                                   </p>
                                 </section>
-                                <section className="flex flex-col gap-1 py-4">
+                                <section className="flex flex-col items-start gap-1 py-4">
                                   <p
                                     className={`${
                                       darkMode
@@ -354,7 +354,7 @@ const CountryCard = () => {
                                 </section>
                               </section>
                               {/* SECOND SECTION */}
-                              <section className="flex flex-col gap-1 py-4 px-4">
+                              <section className="flex flex-col gap-1 py-4 px-4 items-start">
                                 <p
                                   className={`${
                                     darkMode
@@ -426,7 +426,7 @@ const CountryCard = () => {
                                   )}
                                 {country.borders &&
                                   country.borders.length > 0 && (
-                                    <div>
+                                    <div className="mt-2 flex flex-col items-start">
                                       <p
                                         className={`${
                                           darkMode
