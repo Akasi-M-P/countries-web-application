@@ -251,7 +251,7 @@ const CountryCard = () => {
                                 />
                               </section>
                               <section className="px-4">
-                                <section className="py-4">
+                                <section className="text-left mt-10">
                                   <p
                                     className={`${
                                       darkMode ? "text-gray-200" : "text-black"
@@ -426,7 +426,7 @@ const CountryCard = () => {
                                   )}
                                 {country.borders &&
                                   country.borders.length > 0 && (
-                                    <div className="mt-2 flex flex-col items-start">
+                                    <div className="mt-8 flex flex-col items-start">
                                       <p
                                         className={`${
                                           darkMode
@@ -436,12 +436,12 @@ const CountryCard = () => {
                                       >
                                         Border Countries:
                                       </p>
-                                      <div className="flex flex-wrap gap-2">
+                                      <div className="flex flex-wrap gap-2 mt-2">
                                         {country.borders.map(
                                           (borderCountryCode, index) => (
                                             <button
                                               key={index}
-                                              className={`bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md`}
+                                              className={`w-20 rounded-md bg-white shadow-md`}
                                             >
                                               {borderCountryCode}
                                             </button>
