@@ -4,50 +4,19 @@ import { Dialog, Transition } from "@headlessui/react";
 import { BsArrowLeft } from "react-icons/bs";
 import { ThemeContext } from "../Theme/ThemeContext";
 import { RegionContext } from "../CountriesContext.jsx/CountriesContext";
-import axios from "axios";
+
 
 const CountryCard = () => {
   const { darkMode } = useContext(ThemeContext);
-  const { selectedRegion } = useContext(RegionContext);
+  const {
+    countries,
+    filteredCountries,
+    toggleOpenState,
+    openStates,
+    selectedRegion,
+  } = useContext(RegionContext);
 
-  const [openStates, setOpenStates] = useState([]);
   const cancelButtonRef = useRef(null);
-  const [countries, setCountries] = useState([]);
-  const [filteredCountries, setFilteredCountries] = useState([]);
-
-  const handleRegion = (formData) => {
-    if (formData.region !== "Filter by Region") {
-      const filteredByRegion = countries.filter(
-        (country) =>
-          country.region.toLowerCase() === formData.region.toLowerCase()
-      );
-      setFilteredCountries(filteredByRegion);
-    } else {
-      setFilteredCountries(countries);
-    }
-  };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("https://restcountries.com/v3.1/all");
-        const data = response.data;
-        setCountries(data);
-        setOpenStates(new Array(data.length).fill(false));
-        setFilteredCountries(data); // Initialize filteredCountries with all countries
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const toggleOpenState = (index) => {
-    const newOpenStates = [...openStates];
-    newOpenStates[index] = !newOpenStates[index];
-    setOpenStates(newOpenStates);
-  };
 
   return (
     <div className="xl:grid xl:grid-cols-4 xl:gap-4 md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-4 lg:gap-4  hover:cursor-pointer">

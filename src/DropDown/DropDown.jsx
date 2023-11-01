@@ -16,16 +16,16 @@ export default function RegionDropDown() {
     dispatch({ type: "SET_REGION", payload: region }); // Update the selected region
   };
 
-  const regions = ["Africa", "America", "Asia", "Europe", "Oceania"]; // Define available regions
+  const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]; // Define available regions
 
   return (
     <Menu
       as="div"
-      className="relative inline-block text-left mt-5 px-4 xl:px-0 xl:w-full"
+      className="relative inline-block w-1/2 text-left mt-5 px-4 xl:px-0 xl:w-full"
     >
-      <div className="xl:w-full">
+      <div className="w-full xl:w-full">
         <Menu.Button
-          className={`inline-flex w-full xl:w-full justify-center gap-x-1.5 rounded-md ${
+          className={`inline-flex w-11/12 xl:w-full justify-center gap-x-1.5 rounded-md ${
             darkMode ? "bg-slate-800 text-gray-300" : "bg-white text-gray-900"
           }  px-3 py-2 text-sm font-semibold shadow-md xl:w-full xl:py-4 xl:text-lg`}
         >
