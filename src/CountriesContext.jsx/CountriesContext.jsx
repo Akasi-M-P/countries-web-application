@@ -1,26 +1,30 @@
 /* eslint-disable react/prop-types */
-// FontContext.js
 import { createContext, useReducer } from "react";
 
-const FontContext = createContext();
+const RegionContext = createContext();
 
-const fontReducer = (state, action) => {
+const regionReducer = (state, action) => {
   switch (action.type) {
-    case "SET_FONT":
+    case "SET_REGION":
       return action.payload;
+    case "RESET_REGION":
+      return "Filter by Region"; // Reset to "All" region
     default:
       return state;
   }
 };
 
-const FontProvider = ({ children }) => {
-  const [selectedFont, dispatch] = useReducer(fontReducer, "Filter by Region");
+const RegionProvider = ({ children }) => {
+  const [selectedRegion, dispatch] = useReducer(
+    regionReducer,
+    "Filter by Region" // Initialize with "All"
+  );
 
   return (
-    <FontContext.Provider value={{ selectedFont, dispatch }}>
+    <RegionContext.Provider value={{ selectedRegion, dispatch }}>
       {children}
-    </FontContext.Provider>
+    </RegionContext.Provider>
   );
 };
 
-export { FontContext, FontProvider };
+export { RegionContext, RegionProvider };

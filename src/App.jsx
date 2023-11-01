@@ -3,9 +3,7 @@ import NavBar from "./NavBar/NavBar";
 import { ThemeContext } from "./Theme/ThemeContext";
 import SearchBar from "./SearchBar/SearchBar";
 import DropDown from "./DropDown/DropDown";
-import data from "./data.json";
-
-import CardList from "./CardList/CardList";
+import CountryCard from "./CountryCard/CountryCard";
 
 function App() {
   const { darkMode } = useContext(ThemeContext);
@@ -25,7 +23,7 @@ function App() {
         </section>
 
         <div>
-          <CardList data={data} />
+          <CountryCard />
         </div>
       </main>
     </>
