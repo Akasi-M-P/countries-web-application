@@ -268,7 +268,7 @@ function CountryDetails() {
                     </section>
                   </div>
                   {country.borders && country.borders.length > 0 && (
-                    <div className="mt-8 flex flex-col items-start px-4 lg:flex-row lg:gap-2  lg:absolute lg:left-1/2 lg:top-72 lg:mt-10 lg:-ml-4 xl:ml-10 xl:top-72">
+                    <div className="mt-8 h-screen flex flex-col items-start px-4 lg:flex-row lg:gap-2  lg:absolute lg:left-1/2 lg:top-72 lg:mt-10 lg:-ml-4 xl:ml-10 xl:top-72">
                       <p
                         className={`whitespace-nowrap lg:py-2  ${
                           darkMode
