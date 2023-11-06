@@ -1,13 +1,13 @@
-import { useContext } from "react"
-import { ThemeContext } from "../Theme/ThemeContext"
-import {BsFillSunFill, BsMoonStarsFill} from "react-icons/bs"
+import { useContext } from "react";
+import { ThemeContext } from "../Theme/ThemeContext";
+import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 const NavBar = () => {
   const { darkMode, enableDarkMode } = useContext(ThemeContext);
   return (
     <main
       className={`flex justify-between items-center ${
         darkMode ? "bg-var(--dark-blue)" : "bg-gray-100"
-      } px-5 h-16 shadow-md xl:px-12`}
+      } px-8 h-16 shadow-md xl:px-12`}
     >
       <section>
         <p
@@ -43,5 +43,5 @@ const NavBar = () => {
       </section>
     </main>
   );
-}
-export default NavBar
+};
+export default NavBar;

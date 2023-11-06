@@ -2,15 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { ThemeProvider } from './Theme/ThemeContext.jsx'
-import { RegionProvider } from "./CountriesContext.jsx/CountriesContext.jsx";
+import { ThemeProvider } from "./Theme/ThemeContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RegionProvider>
-        <App />
-      </RegionProvider>
+      <App />
     </ThemeProvider>
   </React.StrictMode>
 );
